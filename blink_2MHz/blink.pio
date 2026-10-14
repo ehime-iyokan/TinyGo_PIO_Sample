@@ -1,0 +1,15 @@
+.program blink
+
+.wrap_target
+    set pins, 1
+    set pins, 0
+.wrap
+
+
+% go {
+package main
+
+import (
+    pio "github.com/tinygo-org/pio/rp2-pio"
+)
+%}
