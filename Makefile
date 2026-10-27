@@ -1,5 +1,5 @@
 TARGET := pico
-DIRS   := blink_2MHz blink_1Hz PWM PWM_of_pico-examples
+DIRS   := blink_MHz blink_1Hz PWM PWM_of_pico-examples
 
 .PHONY: help $(DIRS)
 

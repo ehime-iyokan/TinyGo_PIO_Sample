@@ -22,7 +22,7 @@ func main() {
 	cfg.SetSetPins(machine.LED, 1)
 	sm.Init(offset, cfg)
 
-	sm.TxPut(machine.CPUFrequency())
+	sm.TxPut(machine.CPUFrequency() / 2)
 
 	sm.SetEnabled(true)
 

@@ -24,8 +24,8 @@ func main() {
 
 	onRatio := uint32(2)
 	offRatio := uint32(8)
-	sm.TxPut(onRatio * machine.CPUFrequency() / 10)
-	sm.TxPut(offRatio * machine.CPUFrequency() / 10)
+	sm.TxPut(onRatio)
+	sm.TxPut(offRatio)
 
 	sm.SetEnabled(true)
 
