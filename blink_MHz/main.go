@@ -20,6 +20,13 @@ func main() {
 
 	cfg := blinkProgramDefaultConfig(offset)
 	cfg.SetSetPins(machine.LED, 1)
+
+	whole, frac, err := pio.ClkDivFromFrequency(125_000_000, machine.CPUFrequency())
+	if err != nil {
+		panic(err.Error())
+	}
+	cfg.SetClkDivIntFrac(whole, frac)
+
 	sm.Init(offset, cfg)
 
 	sm.SetEnabled(true)
